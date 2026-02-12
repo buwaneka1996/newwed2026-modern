@@ -22,6 +22,9 @@ export default function MorphScene() {
     const DEADLINE = new Date("2026-01-22T23:59:59");
     const isExpired = new Date() > DEADLINE;
 
+    const options = {year: 'numeric', month: 'long', day: 'numeric'};
+    const formattedDeadline = DEADLINE.toLocaleDateString('en-US', options);
+
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const id = params.get("id");
@@ -269,7 +272,7 @@ export default function MorphScene() {
 
                                     {/* RSVP text */}
                                     <p className="rsvp-text">
-                                        Please RSVP by, <br /> May 22nd, 2026
+                                        Please RSVP by, <br /> {formattedDeadline}
                                     </p>
 
                                     {/* Bottom divider */}
