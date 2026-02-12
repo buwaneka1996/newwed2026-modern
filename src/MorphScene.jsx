@@ -22,7 +22,7 @@ export default function MorphScene() {
     const DEADLINE = new Date("2026-05-22T23:59:59");
     const isExpired = new Date() > DEADLINE;
 
-    const options = {year: 'numeric', month: 'long', day: 'numeric'};
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDeadline = DEADLINE.toLocaleDateString('en-US', options);
 
     useEffect(() => {
@@ -215,6 +215,11 @@ export default function MorphScene() {
                                         disabled={isExpired}
                                     />
                                 </div>
+
+                                <p className="rsvp-note">
+                                    Your presence is the greatest gift we could ask for.
+                                    If you wish to honor us with a gift, we kindly request cash gifts only, as we plan to relocate to the USA.
+                                </p>
 
                                 <button
                                     type="submit"
