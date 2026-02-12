@@ -174,6 +174,7 @@ export default function MorphScene() {
                                         type="button"
                                         className={attendance === "yes" ? "selected" : ""}
                                         onClick={() => setAttendance("yes")}
+                                        disabled={isExpired}
                                     >
                                         Yes, gladly
                                     </button>
@@ -182,6 +183,7 @@ export default function MorphScene() {
                                         type="button"
                                         className={attendance === "no" ? "selected" : ""}
                                         onClick={() => setAttendance("no")}
+                                        disabled={isExpired}
                                     >
                                         Regretfully No
                                     </button>
@@ -192,7 +194,7 @@ export default function MorphScene() {
                                     <select
                                         value={guestCount}
                                         onChange={(e) => setGuestCount(Number(e.target.value))}
-                                        disabled={attendance !== "yes"}
+                                        disabled={attendance !== "yes" || isExpired}
                                     >
                                         <option value="" disabled>Select number of guests</option>
                                         {[...Array(maxGuests)].map((_, i) => (
@@ -207,15 +209,16 @@ export default function MorphScene() {
                                         placeholder="Your wishes..."
                                         value={message}
                                         onChange={(e) => setMessage(e.target.value)}
+                                        disabled={isExpired}
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
                                     className="rsvp-submit"
-                                    disabled={!attendance || (attendance === "yes" && guestCount === 0)}
+                                    disabled={!attendance || (attendance === "yes" && guestCount === 0) || isExpired}
                                 >
-                                    Submit
+                                    {isExpired ? " RSVP Closed" : "Submit"}
                                 </button>
                             </form>
                         ) : (
