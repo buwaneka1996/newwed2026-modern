@@ -100,6 +100,16 @@ export default function MorphScene() {
         setSubmitted(true);
     };
 
+    const [showGuestName, setShowGuestName] = useState(false);
+
+    useEffect(() => {
+        if (guestName) {
+            // add a small delay to trigger animation
+            const timer = setTimeout(() => setShowGuestName(true), 300);
+            return () => clearTimeout(timer);
+        }
+    }, [guestName]);
+
     return (
         <div className="morph-wrapper">
 
@@ -119,7 +129,7 @@ export default function MorphScene() {
 
                     {stage === 1 && (
                         <div className="invitation" >
-                            <h2 className={`guest-name ${guestName ? 'show' : ''}`}>
+                            <h2 className={`guest-name ${showGuestName ? 'show' : ''}`}>
                                 {guestName || ''}
                             </h2>
 

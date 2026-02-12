@@ -769,7 +769,6 @@
 .details-content.animate .rsvp-note{
     opacity: 0;
     animation: cleanFadeUp 0.7s ease forwards;
-    animation-delay: 1.2s;
 }
 
 /* ===============================
