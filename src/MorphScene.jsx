@@ -15,6 +15,7 @@ export default function MorphScene() {
     const [guestData, setGuestData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [invalid, setInvalid] = useState(false);
+    const [alreadySubmitted, setAlreadySubmitted] = useState(false);
 
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzS06dsX7jCJSkfHZcdXkmLMJIYF0_iDbI5uoPFq2GMIhIzbWjuQEmpsPnVpiMGl6ya/exec";
 
@@ -39,6 +40,11 @@ export default function MorphScene() {
                 } else {
                     setGuestName(data.guest);
                     setMaxGuests(data.maxGuests);
+                    if (data.attendance) {
+                        setAlreadySubmitted(true);
+                        setSubmitted(true);
+                    }
+
                     setAttendance(data.attendance || "");
                     setGuestCount(data.guestCount || 0);
                     setMessage(data.message || "");
@@ -72,6 +78,7 @@ export default function MorphScene() {
 
     const handleRSVPSubmit = async (e) => {
         e.preventDefault();
+        if (alreadySubmitted) return;
 
         const params = new URLSearchParams(window.location.search);
         const id = params.get("id");
@@ -152,7 +159,7 @@ export default function MorphScene() {
                     )}
 
                     {stage === 3 && (
-                        !submitted ? (
+                        (!submitted && !alreadySubmitted) ? (
                             <form className="details-content animate" onSubmit={handleRSVPSubmit}>
                                 <h2 className="rsvp-title">RSVP</h2>
 
