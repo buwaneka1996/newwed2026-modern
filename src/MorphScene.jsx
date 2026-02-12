@@ -219,8 +219,8 @@ export default function MorphScene() {
                                 </div>
 
                                 <p className="rsvp-note">
-                                    Your presence is the greatest gift we could ask for.
-                                    If you wish to honor us with a gift, we kindly request cash gifts only, as we plan to relocate to the USA.
+                                    The joy of celebrating with you is all we wish for!
+                                    If you would like to give a gift, we kindly ask for monetary contributions only, as physical gifts are not necessary.
                                 </p>
 
                                 <button
