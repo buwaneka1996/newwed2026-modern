@@ -119,7 +119,7 @@ export default function MorphScene() {
 
                     {stage === 1 && (
                         <div className="invitation" >
-                            <h2 className={`guest-name" ${guestName ? 'show' : ''}`}>
+                            <h2 className={`guest-name ${guestName ? 'show' : ''}`}>
                                 {guestName || ''}
                             </h2>
 
