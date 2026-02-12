@@ -126,13 +126,7 @@
     transform: translateY(20px);
     animation: fadeUpLines 0.8s forwards;
     animation-delay: 0.5s;
-    transition: opacity 0.5s ease, transform 0.5s ease;
     /* stagger before line1 starts */
-}
-
-.guest-name.show{
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .invitation-text .line1 {
@@ -707,7 +701,7 @@
 
 .rsvp-note {
     font-size: 0.95rem;
-    color: #f7f7f7;
+    color: #dcdcdc;
     margin-top: 10px;
     line-height: 1.4;
     text-align: center;
