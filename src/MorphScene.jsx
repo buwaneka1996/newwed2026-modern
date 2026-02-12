@@ -75,7 +75,7 @@ export default function MorphScene() {
                     }
                 });
             },
-            { threshold: 0.5 }
+            { threshold: window.innerWidth < 768 ? 0.25 : 0.5 }
         );
 
         document.querySelectorAll('.scroll-trigger').forEach(el => observer.observe(el));
