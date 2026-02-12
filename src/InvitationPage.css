@@ -1,0 +1,212 @@
+@import url(https://db.onlinewebfonts.com/c/cf313f40df6c8f4aca1b34d756e4f272?family=Bad+Russian);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+.invitation-page {
+  width: 100vw;
+  height: 100vh;
+  background: url('/bg.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  backdrop-filter: blur(10px); /* frosted glass effect */
+  border-radius: 24px;
+  padding: 40px 80px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+
+  /* New responsive size */
+  width: 80%;          /* width relative to screen */
+  max-width: 900px;    /* caps at large screens */
+  min-width: 300px;    /* keeps it readable on mobile */
+
+  position: sticky;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* smooth size/padding change */
+}
+
+/* glass card fade in */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.guest-name {
+  font-family: 'Bad Russian', serif;
+  font-size: clamp(2rem, 2vw, 3rem);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  color: #573703;
+  padding-bottom: 20px;
+}
+
+.invitation-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* space between lines */
+  line-height: 1.2;
+  margin-top: 16px;
+}
+
+/* different sizes for each line */
+.line1 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  opacity: 0.8;
+  letter-spacing: 2px;
+  font-family: 'Bad Russian', serif;
+}
+
+.line2 {
+  font-size: clamp(1rem, 1vw, 2rem);
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: 'Bad Russian', serif;
+}
+
+.line3 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-family: 'Bad Russian', serif;
+  letter-spacing: 1px;
+  color: #f1c98a;
+}
+
+/* invitation lines fade up after card */
+.invitation-text .line {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpLines 0.8s forwards;
+}
+
+/* Staggered animation delay */
+.line1 {
+  animation-delay: 1s;
+}
+.line2 {
+  animation-delay: 1.4s;
+}
+.line3 {
+  animation-delay: 1.8s;
+}
+
+@keyframes fadeUpLines {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flowers-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.6s ease-in-out; /* smooth fade */
+}
+
+.flowers-container.fade-out {
+  opacity: 0;
+}
+
+/* Common flower style */
+.flower {
+  position: absolute;
+  bottom: 0;
+  width: 400px; /* adjust as needed */
+  opacity: 0; /* start hidden */
+  animation: fadeIn 2s ease forwards; /* fade in when page loads */
+}
+
+/* Specific positions */
+.flower1 { right: 0;  animation-delay: 0.3s; z-index: 2; } /* flipped in right bottom corner */
+
+.flower2 { left: 0; animation-delay: 0.9s; z-index: 2;} /* left bottom corner */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) ;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add special rule for flower3 to keep it mirrored */
+.flower2 {
+  transform: scaleX(-1);
+}
+
+.flower2 {
+  animation: fadeInFlower2 3s ease forwards;
+}
+
+
+@keyframes fadeInFlower2 {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scaleX(-1); /* keep mirrored */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleX(-1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .glass-card {
+    padding: 60px 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-card {
+    padding: 30px 20px;
+  }
+}
+
+/* Morph class to match 3rd page */
+.glass-card.morph-to-details {
+  width: 80%;        /* match WeddingDetailsPage width */
+  max-width: 800px;  /* optional */
+  padding: 80px 30px; /* match 3rd page glass card padding */
+  border-radius: 24px; /* can adjust if needed */
+  backdrop-filter: blur(12px); /* slightly stronger blur if desired */
+}
