@@ -10,42 +10,46 @@ export default function MorphScene() {
     const [guestCount, setGuestCount] = useState(0);
     const [message, setMessage] = useState("");
     const [submitted, setSubmitted] = useState(false);
-    const [maxGuests, setMaxGuests] = useState(1);
+    const [maxGuests, setMaxGuests] = useState(0);
 
     const [guestData, setGuestData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [invalidInvite, setInvalidInvite] = useState(false);
+    const [invalid, setInvalid] = useState(false);
 
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwxeqPYpvb7iA4CAi9ltCgk6SlxWu6rhfPcuf9RGWnOhecAii8dHsUMD1_BLBQnebRj/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzS06dsX7jCJSkfHZcdXkmLMJIYF0_iDbI5uoPFq2GMIhIzbWjuQEmpsPnVpiMGl6ya/exec";
 
     const DEADLINE = new Date("2026-05-22T23:59:59");
     const isExpired = new Date() > DEADLINE;
 
     useEffect(() => {
-        if (!invitationId) {
-            setInvalidInvite(true);
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        if (!id) {
+            setInvalid(true);
             setLoading(false);
             return;
         }
 
-        fetch(`${SCRIPT_URL}?id=${invitationId}`)
+        fetch(`https://script.google.com/macros/s/AKfycbzS06dsX7jCJSkfHZcdXkmLMJIYF0_iDbI5uoPFq2GMIhIzbWjuQEmpsPnVpiMGl6ya/exec?id=${id}`)
             .then(res => res.json())
             .then(data => {
                 if (data.error) {
-                    setInvalidInvite(true);
+                    setInvalid(true);
                 } else {
-                    setGuestData(data);
                     setGuestName(data.guest);
                     setMaxGuests(data.maxGuests);
+                    setAttendance(data.attendance || "");
+                    setGuestCount(data.guestCount || 0);
+                    setMessage(data.message || "");
                 }
                 setLoading(false);
             })
             .catch(() => {
-                setInvalidInvite(true);
+                setInvalid(true);
                 setLoading(false);
             });
-
-    }, [invitationId]);
+    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -69,18 +73,21 @@ export default function MorphScene() {
     const handleRSVPSubmit = async (e) => {
         e.preventDefault();
 
-        const url = new URL(SCRIPT_URL);
-        url.searchParams.append("id", invitationId);
-        url.searchParams.append("attendance", attendance);
-        url.searchParams.append("guestCount", guestCount);
-        url.searchParams.append("message", message);
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
 
-        try {
-            await fetch(url.toString(), { method: "POST" });
-            setSubmitted(true);
-        } catch (err) {
-            alert("Submission failed. Please try again.");
-        }
+        const formData = new URLSearchParams();
+        formData.append("id", id);
+        formData.append("attendance", attendance);
+        formData.append("guestCount", guestCount);
+        formData.append("message", message);
+
+        await fetch("https://script.google.com/macros/s/AKfycbzS06dsX7jCJSkfHZcdXkmLMJIYF0_iDbI5uoPFq2GMIhIzbWjuQEmpsPnVpiMGl6ya/exec", {
+            method: "POST",
+            body: formData
+        });
+
+        setSubmitted(true);
     };
 
     return (
