@@ -25,6 +25,8 @@ export default function MorphScene() {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDeadline = DEADLINE.toLocaleDateString('en-US', options);
 
+    const [showGuestName, setShowGuestName] = useState(false);
+
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const id = params.get("id");
@@ -43,6 +45,9 @@ export default function MorphScene() {
                 } else {
                     setGuestName(data.guest);
                     setMaxGuests(data.maxGuests);
+
+                    setTimeout(() => setShowGuestName(true),400);
+
                     if (data.attendance) {
                         setAlreadySubmitted(true);
                         setSubmitted(true);
@@ -100,8 +105,6 @@ export default function MorphScene() {
         setSubmitted(true);
     };
 
-    const [showGuestName, setShowGuestName] = useState(false);
-
 
     return (
         <div className="morph-wrapper">
@@ -122,7 +125,7 @@ export default function MorphScene() {
 
                     {stage === 1 && (
                         <div className="invitation" >
-                            <h2 className={"guest-name"}>
+                            <h2 className={`guest-name ${showGuestName ? 'show' : ''}`}>
                                 {guestName}
                             </h2>
 
