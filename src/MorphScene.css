@@ -125,8 +125,13 @@
     /* start hidden */
     transform: translateY(20px);
     animation: fadeUpLines 0.8s forwards;
-    animation-delay: 0.2s;
+    transition: opacity 0.5s ease, transform 0.5s ease;
     /* stagger before line1 starts */
+}
+
+.guest-name.show{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .invitation-text .line1 {
@@ -759,7 +764,8 @@
 .details-content.animate .attendance-question,
 .details-content.animate .attendance-options,
 .details-content.animate .rsvp-submit,
-.details-content.animate .rsvp-field.message-field {
+.details-content.animate .rsvp-field.message-field 
+.details-content.animate .rsvp-note{
     opacity: 0;
     animation: cleanFadeUp 0.7s ease forwards;
 }
