@@ -19,7 +19,7 @@ export default function MorphScene() {
 
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzS06dsX7jCJSkfHZcdXkmLMJIYF0_iDbI5uoPFq2GMIhIzbWjuQEmpsPnVpiMGl6ya/exec";
 
-    const DEADLINE = new Date("2026-01-22T23:59:59");
+    const DEADLINE = new Date("2026-05-22T23:59:59");
     const isExpired = new Date() > DEADLINE;
 
     const options = {year: 'numeric', month: 'long', day: 'numeric'};

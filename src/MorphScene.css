@@ -699,6 +699,14 @@
     color: rgb(255, 255, 255);
 }
 
+.rsvp-note {
+    font-size: 0.95rem;
+    color: #444;
+    margin-top: 15px;
+    line-height: 1.4;
+    text-align: center;
+}
+
 /* ===============================
    Submit Button
    =============================== */
