@@ -297,7 +297,7 @@ export default function MorphScene() {
 
                                     {/* RSVP text */}
                                     <p className="rsvp-text">
-                                        Please RSVP by, <br /> {formattedDeadline}
+                                        RSVP by, <br /> {formattedDeadline}
                                     </p>
 
                                     {/* Bottom divider */}
