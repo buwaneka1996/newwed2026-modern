@@ -729,6 +729,7 @@
     transform: translateY(-8px);
     pointer-events: none;
     transition: all 0.7s ease;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* visible when YES */
@@ -839,6 +840,7 @@
     opacity: 0;
     animation: fadeInUp 1s forwards;
     animation-delay: 0.6s;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .rsvp-divider {
