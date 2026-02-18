@@ -710,6 +710,10 @@
     margin-top: 8px;
     line-height: 1.4;
     text-align: center;
+    opacity: 0;            /* hidden by default */
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 
@@ -731,6 +735,7 @@
 .rsvp-note-container.show .rsvp-note {
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
 /* ===============================
