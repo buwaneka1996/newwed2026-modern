@@ -117,7 +117,7 @@
     margin-bottom: 12px;
     letter-spacing: 1px;
     color: #1f1401;
-        
+
     padding-bottom: 20px;
 
     font-weight: 700;
@@ -707,30 +707,32 @@
 }
 
 .rsvp-note-container {
-  min-height: 55px; /* keeps the spacing reserved */
-  overflow: hidden;
+    min-height: 55px;
+    /* keeps the spacing reserved */
+    overflow: hidden;
 }
 
 /* hidden by default */
 .rsvp-note {
-  font-size: 0.95rem;
-  color: #dcdcdc;
-  margin-top: 8px;
-  line-height: 1.4;
-  text-align: center;
+    font-size: 0.95rem;
+    color: #dcdcdc;
+    margin-top: 8px;
+    line-height: 1.4;
+    text-align: center;
 
-  opacity: 0;            /* hidden by default */
-  transform: translateY(-8px);
-  pointer-events: none;
-  transition: all 0.7s ease;
+    opacity: 0;
+    /* hidden by default */
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: all 0.7s ease;
 }
 
 /* visible when YES */
 .rsvp-note.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  transition: all 0.7s ease;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: all 0.7s ease;
 }
 
 /* ===============================
@@ -1244,12 +1246,12 @@ body {
         margin-top: 20px;
     }
 
-    .top-flower{
+    .top-flower {
         width: 18%;
         margin-top: 10px;
     }
 
-    .date{
+    .date {
         font-size: 2rem;
         margin-top: 10px;
         margin-bottom: 40px;
@@ -1274,7 +1276,7 @@ body {
         margin-bottom: 10px;
     }
 
-    .inviting-text{
+    .inviting-text {
         font-size: 1.8rem;
     }
 
@@ -1293,32 +1295,32 @@ body {
         margin-top: 20px;
     }
 
-    .attendance-options button{
+    .attendance-options button {
         font-size: 1.2rem;
         margin-top: 10px;
         margin-bottom: 20px;
     }
 
-    .rsvp-field label{
+    .rsvp-field label {
         font-size: 1.15rem;
         margin-bottom: 15px;
     }
 
-    .rsvp-field textarea{
+    .rsvp-field textarea {
         font-size: 1rem;
         margin-bottom: 10px;
     }
 
-    .rsvp-submit{
+    .rsvp-submit {
         font-size: 1.6rem;
         margin-top: 20px;
     }
 
-    .rsvp-confirmation{
+    .rsvp-confirmation {
         margin-top: 200px;
     }
 
-    
+
 
     .contact-title {
         font-size: 3rem;
@@ -1332,23 +1334,23 @@ body {
         font-size: 2rem;
     }
 
-    .contact-label{
+    .contact-label {
         margin-left: 40px;
     }
 
-    .contact-number{
+    .contact-number {
         margin-left: 60px;
     }
 
-    .contact-right{
+    .contact-right {
         margin-top: 70px;
     }
 
-    .contact-flower.small{
+    .contact-flower.small {
         width: 35%;
     }
 
-    .rsvp-text{
+    .rsvp-text {
         font-size: 2rem;
     }
 }
@@ -1366,7 +1368,7 @@ body {
         letter-spacing: 0.2rem;
     }
 
-     .invitation-text .line2 {
+    .invitation-text .line2 {
         font-size: 1.5rem;
         letter-spacing: 0.2rem;
     }
@@ -1377,12 +1379,12 @@ body {
         margin-top: 15px;
     }
 
-    .top-flower{
+    .top-flower {
         width: 20%;
         margin-top: 5px;
     }
 
-    .date{
+    .date {
         font-size: 1.8rem;
     }
 
@@ -1404,11 +1406,11 @@ body {
         font-size: 1.6rem;
     }
 
-    .inviting-text{
+    .inviting-text {
         font-size: 1.4rem;
     }
 
-    .rsvp-divider{
+    .rsvp-divider {
         height: 1px;
     }
 
@@ -1426,25 +1428,25 @@ body {
         font-size: 1.3rem;
     }
 
-    .attendance-options button{
+    .attendance-options button {
         font-size: 1.2rem;
         margin-top: 10px;
     }
 
-    .rsvp-field label{
+    .rsvp-field label {
         font-size: 1.15rem;
     }
 
-    .rsvp-submit{
+    .rsvp-submit {
         font-size: 20px;
         margin-top: 20px;
     }
 
-    .rsvp-confirmation{
+    .rsvp-confirmation {
         margin-top: 200px;
     }
 
-    .contact-left{
+    .contact-left {
         margin-left: 20px;
     }
 
@@ -1459,15 +1461,15 @@ body {
         font-size: 2rem;
     }
 
-    .contact-right{
+    .contact-right {
         margin-top: 70px;
     }
 
-    .contact-flower.small{
+    .contact-flower.small {
         width: 35%;
     }
 
-    .rsvp-text{
+    .rsvp-text {
         font-size: 2rem;
     }
 }
@@ -1476,15 +1478,21 @@ body {
 /* Standard Mobile */
 @media (max-width: 768px) {
 
-    .flower{
-        width: 50%;;
+    .flower {
+        width: 50%;
+        ;
     }
-    
+
     .guest-name {
         font-size: 1.6rem;
         margin: 10px;
         font-weight: 700;
-        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
+        text-shadow:
+            0 0 #1f1401,
+            /* no blur, just a copy on top */
+            1px 0 #1f1401,
+            /* small horizontal offset */
+            0 1px #1f1401;
     }
 
     .invitation-text .line1 {
@@ -1501,12 +1509,12 @@ body {
         margin-top: 10px;
     }
 
-    .top-flower{
+    .top-flower {
         margin-top: 5px;
         width: 8rem;
     }
-    
-    .date{
+
+    .date {
         font-size: 1.6rem;
     }
 
@@ -1526,7 +1534,7 @@ body {
         font-size: 1.5rem;
     }
 
-    .inviting-text{
+    .inviting-text {
         font-size: 1.4rem;
     }
 
@@ -1549,11 +1557,11 @@ body {
         padding: 11px 48px;
     }
 
-    .rsvp-confirmation{
+    .rsvp-confirmation {
         margin: 150px 0;
     }
 
-    .contact-wrapper{
+    .contact-wrapper {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -1561,7 +1569,7 @@ body {
     }
 
     .contact-left,
-    .contact-right{
+    .contact-right {
         align-items: center;
         text-align: center;
         justify-content: center;
@@ -1576,7 +1584,7 @@ body {
         width: 100%;
     }
 
-    .contact-title{
+    .contact-title {
         font-size: 2.2rem;
         margin-left: 0;
         margin-top: 0;
@@ -1598,12 +1606,12 @@ body {
         width: 100%;
     }
 
-    .contact-flower.small{
+    .contact-flower.small {
         width: 20%;
         margin-top: -55px;
     }
 
-    .rsvp-text{
+    .rsvp-text {
         font-size: 1.6rem;
     }
 }
@@ -1611,14 +1619,20 @@ body {
 /* Very Small Phones */
 @media (max-width: 540px) {
 
-    .flower{
-        width: 60%;;
+    .flower {
+        width: 60%;
+        ;
     }
 
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
-        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
+        text-shadow:
+            0 0 #1f1401,
+            /* no blur, just a copy on top */
+            1px 0 #1f1401,
+            /* small horizontal offset */
+            0 1px #1f1401;
     }
 
     .invitation-text .line1 {
@@ -1630,10 +1644,15 @@ body {
         margin-top: 10px;
     }
 
-    .top-flower{ margin-top: -10px;
-    width: 25%;}
+    .top-flower {
+        margin-top: -10px;
+        width: 25%;
+    }
 
-    .date { font-size: 1.2rem; margin-bottom: 15px;}
+    .date {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
 
     .title-one {
         font-size: 1.1rem;
@@ -1651,11 +1670,11 @@ body {
         font-size: 1.1rem;
     }
 
-    .inviting-text{
+    .inviting-text {
         font-size: 1rem;
     }
 
-    .divider-one{
+    .divider-one {
         margin-top: 20px;
     }
 
@@ -1674,29 +1693,29 @@ body {
         margin-top: -10px;
     }
 
-    .attendance-options button{
+    .attendance-options button {
         font-size: 1rem;
         margin-top: 8px;
     }
 
-    .rsvp-field label{
+    .rsvp-field label {
         font-size: 0.8em;
     }
 
-    .rsvp-submit{
+    .rsvp-submit {
         font-size: 1.1rem;
         margin-top: 12px;
     }
 
-    .rsvp-note{
+    .rsvp-note {
         font-size: 0.8rem;
     }
 
-    .rsvp-confirmation{
+    .rsvp-confirmation {
         margin-top: 100px;
     }
 
-    .contact-wrapper{
+    .contact-wrapper {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -1704,12 +1723,12 @@ body {
     }
 
     .contact-left,
-    .contact-right{
+    .contact-right {
         align-items: center;
         text-align: center;
     }
 
-    .contact-title{
+    .contact-title {
         font-size: 2.2rem;
         margin-left: 0;
         margin-top: 0;
@@ -1727,12 +1746,12 @@ body {
         margin-left: 0px;
     }
 
-    .contact-flower.small{
+    .contact-flower.small {
         width: 20%;
         margin-top: -75px;
     }
 
-    .rsvp-text{
+    .rsvp-text {
         font-size: 1.6rem;
     }
 }
@@ -1741,14 +1760,20 @@ body {
 /* Very Small Phones */
 @media (max-width: 420px) {
 
-    .flower{
-        width: 70%;;
+    .flower {
+        width: 70%;
+        ;
     }
 
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
-        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
+        text-shadow:
+            0 0 #1f1401,
+            /* no blur, just a copy on top */
+            1px 0 #1f1401,
+            /* small horizontal offset */
+            0 1px #1f1401;
     }
 
     .invitation-text .line1 {
@@ -1760,8 +1785,14 @@ body {
         margin-top: 10px;
     }
 
-    .top-flower{ margin-top: 4px;}
-    .date { font-size: 1.5rem;}
+    .top-flower {
+        margin-top: 4px;
+    }
+
+    .date {
+        font-size: 1.5rem;
+    }
+
     .title-one {
         font-size: 1.2rem;
     }
@@ -1790,11 +1821,11 @@ body {
         font-size: 0.9rem;
     }
 
-    .rsvp-note{
+    .rsvp-note {
         font-size: 0.6rem;
     }
 
-    .contact-wrapper{
+    .contact-wrapper {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -1802,12 +1833,12 @@ body {
     }
 
     .contact-left,
-    .contact-right{
+    .contact-right {
         align-items: center;
         text-align: center;
     }
 
-    .contact-title{
+    .contact-title {
         font-size: 2rem;
         margin-left: 0;
         margin-top: 0;
@@ -1831,7 +1862,7 @@ body {
         margin-top: 12px;
     }
 
-    .rsvp-confirmation{
+    .rsvp-confirmation {
         margin: 120px 0;
     }
 }
@@ -1840,14 +1871,20 @@ body {
 /* iPhone SE (smallest pain point 😄) */
 @media (max-width: 375px) {
 
-    .flower{
-        width: 60%;;
+    .flower {
+        width: 60%;
+        ;
     }
 
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
-        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
+        text-shadow:
+            0 0 #1f1401,
+            /* no blur, just a copy on top */
+            1px 0 #1f1401,
+            /* small horizontal offset */
+            0 1px #1f1401;
     }
 
     .invitation-text .line1 {
@@ -1867,11 +1904,11 @@ body {
         letter-spacing: 0.1rem;
     }
 
-    .top-flower{
+    .top-flower {
         margin-top: -10px;
     }
 
-    .date{
+    .date {
         font-size: 1.2rem;
     }
 
@@ -1906,19 +1943,19 @@ body {
         margin-top: -10px;
     }
 
-    .attendance-options button{
+    .attendance-options button {
         font-size: 0.8rem;
     }
 
-    .rsvp-note{
+    .rsvp-note {
         font-size: 0.6rem;
     }
 
-    .rsvp-submit{
+    .rsvp-submit {
         margin-top: 10px;
     }
 
-    .contact-wrapper{
+    .contact-wrapper {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -1926,12 +1963,12 @@ body {
     }
 
     .contact-left,
-    .contact-right{
+    .contact-right {
         align-items: center;
         text-align: center;
     }
 
-    .contact-title{
+    .contact-title {
         font-size: 1.8rem;
         margin-left: 0;
         margin-top: 0;
@@ -1949,16 +1986,16 @@ body {
         margin-left: 0px;
     }
 
-    .contact-flower.small{
+    .contact-flower.small {
         width: 18%;
         margin-top: -75px;
     }
 
-    .rsvp-text{
+    .rsvp-text {
         font-size: 1.2rem;
     }
 
-    .rsvp-confirmation{
+    .rsvp-confirmation {
         margin: 100px 0;
     }
 }
@@ -1969,7 +2006,12 @@ body {
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
-        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
+        text-shadow:
+            0 0 #1f1401,
+            /* no blur, just a copy on top */
+            1px 0 #1f1401,
+            /* small horizontal offset */
+            0 1px #1f1401;
     }
 
     .invitation-text .line1 {
