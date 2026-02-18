@@ -51,10 +51,12 @@ export default function MorphScene() {
                     if (data.attendance) {
                         setAlreadySubmitted(true);
                         setSubmitted(true);
+                        setAttendance(data.attendance);
+                        setGuestCount(data.guestCount ? String(data.guestCount) : "");
+                    }else{
+                        setAttendance("");
+                        setGuestCount("");
                     }
-
-                    setAttendance(data.attendance || "");
-                    setGuestCount(data.guestCount ? String(data.guestCount) : "");
                     setMessage(data.message || "");
                 }
                 setLoading(false);
