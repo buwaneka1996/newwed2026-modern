@@ -54,7 +54,7 @@ export default function MorphScene() {
                     }
 
                     setAttendance(data.attendance || "");
-                    setGuestCount(data.guestCount || 0);
+                    setGuestCount(data.guestCount ? String(data.guestCount) : "");
                     setMessage(data.message || "");
                 }
                 setLoading(false);
@@ -184,7 +184,10 @@ export default function MorphScene() {
                                     <button
                                         type="button"
                                         className={attendance === "yes" ? "selected" : ""}
-                                        onClick={() => setAttendance("yes")}
+                                        onClick={() => {
+                                            setAttendance("yes");
+                                            setGuestCount("");
+                                        }}
                                         disabled={isExpired}
                                     >
                                         Yes, gladly
@@ -193,7 +196,10 @@ export default function MorphScene() {
                                     <button
                                         type="button"
                                         className={attendance === "no" ? "selected" : ""}
-                                        onClick={() => setAttendance("no")}
+                                        onClick={() => {
+                                            setAttendance("no");
+                                            setGuestCount("");
+                                        }}
                                         disabled={isExpired}
                                     >
                                         Regretfully No
