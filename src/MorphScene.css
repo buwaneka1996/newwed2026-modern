@@ -120,6 +120,8 @@
         
     padding-bottom: 20px;
 
+    font-weight: 700;
+
     /* Fade up animation */
     opacity: 0;
     /* start hidden */
@@ -720,7 +722,7 @@
   opacity: 0;            /* hidden by default */
   transform: translateY(-8px);
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
 
 /* visible when YES */
@@ -728,7 +730,7 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
 
 /* ===============================
@@ -1481,7 +1483,7 @@ body {
     .guest-name {
         font-size: 1.6rem;
         margin: 10px;
-        font-weight: bold;
+        font-weight: 700;
     }
 
     .invitation-text .line1 {
@@ -1614,7 +1616,7 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
-        font-weight: bold;
+        font-weight: 700;
     }
 
     .invitation-text .line1 {
@@ -1743,7 +1745,7 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
-        font-weight: bold;
+        font-weight: 700;
     }
 
     .invitation-text .line1 {
@@ -1841,7 +1843,7 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
-        font-weight: bold;
+        font-weight: 700;
     }
 
     .invitation-text .line1 {
@@ -1962,7 +1964,7 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
-        font-weight: bold;
+        font-weight: 700;
     }
 
     .invitation-text .line1 {
