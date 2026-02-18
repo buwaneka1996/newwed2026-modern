@@ -728,6 +728,7 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  transition: all 0.3s ease;
 }
 
 /* ===============================
@@ -781,10 +782,9 @@
 .details-content.animate .rsvp-guest,
 .details-content.animate .attendance-question,
 .details-content.animate .attendance-options,
-.details-content.animate .rsvp-field.guest-count-container
+.details-content.animate .rsvp-field.guest-count-container,
 .details-content.animate .rsvp-submit,
-.details-content.animate .rsvp-field.message-field, 
-.details-content.animate .rsvp-note{
+.details-content.animate .rsvp-field.message-field {
     opacity: 0;
     animation: cleanFadeUp 0.7s ease forwards;
 }
