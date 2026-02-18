@@ -120,7 +120,7 @@
 
     padding-bottom: 20px;
 
-    font-weight: 700;
+    font-weight: 900;
 
     /* Fade up animation */
     opacity: 0;
@@ -1486,13 +1486,9 @@ body {
     .guest-name {
         font-size: 1.6rem;
         margin: 10px;
-        font-weight: 700;
-        text-shadow:
-            0 0 #1f1401,
-            /* no blur, just a copy on top */
-            1px 0 #1f1401,
-            /* small horizontal offset */
-            0 1px #1f1401;
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     .invitation-text .line1 {
@@ -1626,13 +1622,9 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
-        font-weight: 700;
-        text-shadow:
-            0 0 #1f1401,
-            /* no blur, just a copy on top */
-            1px 0 #1f1401,
-            /* small horizontal offset */
-            0 1px #1f1401;
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     .invitation-text .line1 {
@@ -1768,12 +1760,9 @@ body {
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
-        text-shadow:
-            0 0 #1f1401,
-            /* no blur, just a copy on top */
-            1px 0 #1f1401,
-            /* small horizontal offset */
-            0 1px #1f1401;
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     .invitation-text .line1 {
@@ -1879,12 +1868,9 @@ body {
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
-        text-shadow:
-            0 0 #1f1401,
-            /* no blur, just a copy on top */
-            1px 0 #1f1401,
-            /* small horizontal offset */
-            0 1px #1f1401;
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     .invitation-text .line1 {
@@ -2006,12 +1992,9 @@ body {
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
-        text-shadow:
-            0 0 #1f1401,
-            /* no blur, just a copy on top */
-            1px 0 #1f1401,
-            /* small horizontal offset */
-            0 1px #1f1401;
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     .invitation-text .line1 {
