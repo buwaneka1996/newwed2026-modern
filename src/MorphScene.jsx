@@ -232,8 +232,8 @@ export default function MorphScene() {
                                     />
                                 </div>
 
-                                <div className={`rsvp-note-container ${attendance === "yes" ? "show" : ""}`}>
-                                    <p className="rsvp-note">
+                                <div className="rsvp-note-container">
+                                    <p className={`rsvp-note ${attendance === "yes" ? "show" : ""}`}>
                                         The joy of celebrating with you is all we wish for! <br />
                                         If you would like to give a gift, we kindly ask for monetary contributions only, <br />
                                         as physical gifts are not necessary.
