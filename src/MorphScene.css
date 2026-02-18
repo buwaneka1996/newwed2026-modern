@@ -1484,6 +1484,7 @@ body {
         font-size: 1.6rem;
         margin: 10px;
         font-weight: 700;
+        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
     }
 
     .invitation-text .line1 {
@@ -1617,6 +1618,7 @@ body {
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
+        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
     }
 
     .invitation-text .line1 {
@@ -1746,6 +1748,7 @@ body {
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
+        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
     }
 
     .invitation-text .line1 {
@@ -1844,6 +1847,7 @@ body {
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
+        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
     }
 
     .invitation-text .line1 {
@@ -1965,6 +1969,7 @@ body {
     .guest-name {
         font-size: 1.45rem;
         font-weight: 700;
+        text-shadow: 0 0 1px #1f1401, 0 0 1px #1f1401;
     }
 
     .invitation-text .line1 {
