@@ -120,7 +120,7 @@
 
     padding-bottom: 20px;
 
-    font-weight: 900;
+    font-weight: bold;
 
     /* Fade up animation */
     opacity: 0;
@@ -661,6 +661,7 @@
     max-height: none;
     pointer-events: auto;
     transform: translateY(0) scaleY(1);
+    margin-bottom: 10px;
 }
 
 /* Labels */
