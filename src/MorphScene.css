@@ -763,6 +763,7 @@
 .details-content.animate .rsvp-guest,
 .details-content.animate .attendance-question,
 .details-content.animate .attendance-options,
+.details-content.animate .rsvp-field.guest-count-container
 .details-content.animate .rsvp-submit,
 .details-content.animate .rsvp-field.message-field, 
 .details-content.animate .rsvp-note{
@@ -1462,6 +1463,7 @@ body {
     .guest-name {
         font-size: 1.6rem;
         margin: 10px;
+        font-weight: bold;
     }
 
     .invitation-text .line1 {
@@ -1594,6 +1596,7 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
+        font-weight: bold;
     }
 
     .invitation-text .line1 {
@@ -1722,6 +1725,7 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
+        font-weight: bold;
     }
 
     .invitation-text .line1 {
@@ -1819,6 +1823,7 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
+        font-weight: bold;
     }
 
     .invitation-text .line1 {
@@ -1939,6 +1944,7 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
+        font-weight: bold;
     }
 
     .invitation-text .line1 {

@@ -7,7 +7,7 @@ export default function MorphScene() {
 
     const [guestName, setGuestName] = useState("");
     const [attendance, setAttendance] = useState("");
-    const [guestCount, setGuestCount] = useState(0);
+    const [guestCount, setGuestCount] = useState("");
     const [message, setMessage] = useState("");
     const [submitted, setSubmitted] = useState(false);
     const [maxGuests, setMaxGuests] = useState(0);
@@ -224,15 +224,17 @@ export default function MorphScene() {
                                     />
                                 </div>
 
+                                {attendance === "yes" && (
                                 <p className="rsvp-note">
                                     The joy of celebrating with you is all we wish for! <br/>
                                     If you would like to give a gift, we kindly ask for monetary contributions only, <br/> as physical gifts are not necessary.
                                 </p>
+                                )}
 
                                 <button
                                     type="submit"
                                     className="rsvp-submit"
-                                    disabled={!attendance || (attendance === "yes" && guestCount === 0) || isExpired}
+                                    disabled={!attendance || (attendance === "yes" && !guestCount) || isExpired}
                                 >
                                     {isExpired ? " RSVP Closed" : "Submit"}
                                 </button>
