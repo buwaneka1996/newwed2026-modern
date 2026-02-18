@@ -232,13 +232,15 @@ export default function MorphScene() {
                                     />
                                 </div>
 
-                                <div className={`rsvp-note-container ${attendance === "yes" ? "show" : ""}`}>
-                                    <p className="rsvp-note">
-                                        The joy of celebrating with you is all we wish for! <br />
-                                        If you would like to give a gift, we kindly ask for monetary contributions only, <br />
-                                        as physical gifts are not necessary.
-                                    </p>
-                                </div>
+                                {attendance === "yes" && (
+                                    <div className="rsvp-note-container show">
+                                        <p className="rsvp-note">
+                                            The joy of celebrating with you is all we wish for! <br />
+                                            If you would like to give a gift, we kindly ask for monetary contributions only, <br />
+                                            as physical gifts are not necessary.
+                                        </p>
+                                    </div>
+                                )}
 
 
                                 <button
