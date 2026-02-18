@@ -46,14 +46,14 @@ export default function MorphScene() {
                     setGuestName(data.guest);
                     setMaxGuests(data.maxGuests);
 
-                    setTimeout(() => setShowGuestName(true),400);
+                    setTimeout(() => setShowGuestName(true), 400);
 
                     if (data.attendance) {
                         setAlreadySubmitted(true);
                         setSubmitted(true);
                         setAttendance(data.attendance);
                         setGuestCount(data.guestCount ? String(data.guestCount) : "");
-                    }else{
+                    } else {
                         setAttendance("");
                         setGuestCount("");
                     }
@@ -232,12 +232,14 @@ export default function MorphScene() {
                                     />
                                 </div>
 
-            
-                                <p className={`rsvp-note ${attendance === "yes" ? "show" : ""}`}>
-                                    The joy of celebrating with you is all we wish for! <br/>
-                                    If you would like to give a gift, we kindly ask for monetary contributions only, <br/> as physical gifts are not necessary.
-                                </p>
-                                
+                                <div className={`rsvp-note-container ${attendance === "yes" ? "show" : ""}`}>
+                                    <p className="rsvp-note">
+                                        The joy of celebrating with you is all we wish for! <br />
+                                        If you would like to give a gift, we kindly ask for monetary contributions only, <br />
+                                        as physical gifts are not necessary.
+                                    </p>
+                                </div>
+
 
                                 <button
                                     type="submit"

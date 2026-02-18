@@ -704,22 +704,24 @@
     color: rgb(255, 255, 255);
 }
 
-.rsvp-note {
-    font-size: 0.95rem;
-    color: #dcdcdc;
-    margin-top: 10px;
-    line-height: 1.4;
-    text-align: center;
-
-    min-height: 55px;
-
-    opacity: 0;
-    transition: opacity 0.3s ease;
+/* Reserve space like guest-count */
+.rsvp-note-container {
+    min-height: 55px;   /* keeps spacing */
+    overflow: hidden;
 }
 
-.rsvp-note.show{
-    opacity: 1;
+/* hidden by default */
+.rsvp-note-container:not(.show) .rsvp-note {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
 
+/* visible when YES */
+.rsvp-note-container.show .rsvp-note {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ===============================
