@@ -704,6 +704,24 @@
     color: rgb(255, 255, 255);
 }
 
+.rsvp-note {
+    font-size: 0.95rem;
+    color: #dcdcdc;
+    margin-top: 10px;
+    line-height: 1.4;
+    text-align: center;
+
+    min-height: 55px;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rsvp-note.show{
+    opacity: 1;
+
+}
+
 /* Reserve space like guest-count */
 .rsvp-note-container {
     min-height: 55px;   /* keeps spacing */
