@@ -204,7 +204,7 @@ export default function MorphScene() {
                                     <label>Number of guests</label>
                                     <select
                                         value={guestCount}
-                                        onChange={(e) => setGuestCount(Number(e.target.value))}
+                                        onChange={(e) => setGuestCount(e.target.value)}
                                         disabled={attendance !== "yes" || isExpired}
                                     >
                                         <option value="" disabled>Select number of guests</option>
@@ -224,12 +224,12 @@ export default function MorphScene() {
                                     />
                                 </div>
 
-                                {attendance === "yes" && (
-                                <p className="rsvp-note">
+            
+                                <p className={`rsvp-note ${attendance === "yes" ? "show" : ""}`}>
                                     The joy of celebrating with you is all we wish for! <br/>
                                     If you would like to give a gift, we kindly ask for monetary contributions only, <br/> as physical gifts are not necessary.
                                 </p>
-                                )}
+                                
 
                                 <button
                                     type="submit"
