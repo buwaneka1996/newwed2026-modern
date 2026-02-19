@@ -79,9 +79,11 @@ export default function MorphScene() {
                         if (!guestName && nextStage > 1) return;
 
                         // Prevent skipping stages
-                        if (nextStage === stage + 1) {
-                            setStage(nextStage);
+                        if (nextStage > stage + 1) {
+                            return;
                         }
+
+                        setStage(nextStage);
                     }
                 });
             },
