@@ -46,7 +46,7 @@ export default function MorphScene() {
                     setGuestName(data.guest);
                     setMaxGuests(data.maxGuests);
 
-                    setTimeout(() => setShowGuestName(true), 400);
+                    setShowGuestName(true);
 
                     if (data.attendance) {
                         setAlreadySubmitted(true);
@@ -127,7 +127,7 @@ export default function MorphScene() {
 
                     {stage === 1 && (
                         <div className="invitation" >
-                            <h2 className={`guest-name ${showGuestName ? 'show' : ''}`}>
+                            <h2 className="guest-name">
                                 {guestName}
                             </h2>
 

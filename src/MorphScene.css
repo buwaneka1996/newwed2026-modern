@@ -117,9 +117,7 @@
     margin-bottom: 12px;
     letter-spacing: 1px;
     color: #1f1401;
-
     padding-bottom: 20px;
-
     font-weight: bold;
 
     /* Fade up animation */
@@ -127,14 +125,9 @@
     /* start hidden */
     transform: translateY(20px);
     animation: fadeUpLines 0.8s forwards;
-    animation-delay: 0.5s;
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.guest-name.show {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .invitation-text .line1 {
     font-size: clamp(1.4rem, 2vw, 2rem);
@@ -573,6 +566,7 @@
     font-style: italic;
     color: #eee3d1;
     font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Attendance question & buttons */
