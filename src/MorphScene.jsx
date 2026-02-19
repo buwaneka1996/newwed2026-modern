@@ -107,10 +107,6 @@ export default function MorphScene() {
         setSubmitted(true);
     };
 
-    if (loading) {
-        return <div className="morph-wrapper" />;
-    }
-
 
     return (
         <div className="morph-wrapper">
