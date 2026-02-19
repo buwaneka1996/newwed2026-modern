@@ -73,17 +73,26 @@ export default function MorphScene() {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const nextStage = Number(entry.target.dataset.stage);
-                        if (nextStage) setStage(nextStage);
+                        if (!nextStage) return;
+
+                        // Block progression until name is visible
+                        if (!guestName && nextStage > 1) return;
+
+                        // Prevent skipping stages
+                        if (nextStage === stage + 1) {
+                            setStage(nextStage);
+                        }
                     }
                 });
             },
             { threshold: window.innerWidth < 768 ? 0.25 : 0.5 }
         );
 
-        document.querySelectorAll('.scroll-trigger').forEach(el => observer.observe(el));
+        document.querySelectorAll('.scroll-trigger')
+            .forEach(el => observer.observe(el));
 
         return () => observer.disconnect();
-    }, []);
+    }, [stage, guestName]);
 
 
     const handleRSVPSubmit = async (e) => {
@@ -131,11 +140,23 @@ export default function MorphScene() {
                                 {guestName}
                             </h2>
 
-                            <p className="invitation-text">
+                            <p className={`invitation-text ${guestName ? "visible" : ""}`}>
                                 <span className="line line1">WEDDING INVITATION</span>
                                 <span className="line line2">OF</span>
                                 <span className="line line3">ISHINI & BUWANEKA</span>
                             </p>
+
+                            {guestName && (
+                                <div
+                                    className={`scroll-indicator ${guestName ? "visible" : ""}`}
+                                    onClick={() => {
+                                        const next = document.querySelector('[data-stage="2"]');
+                                        next?.scrollIntoView({ behavior: "smooth" });
+                                    }}
+                                >
+                                    ↓
+                                </div>
+                            )}
                         </div>
                     )}
 
