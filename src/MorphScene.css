@@ -120,14 +120,20 @@
     padding-bottom: 20px;
     font-weight: bold;
 
-    /* Fade up animation */
     opacity: 0;
-    /* start hidden */
-    transform: translateY(20px);
-    animation: fadeUpLines 0.8s forwards;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.guest-name.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.guest-name:empty::before {
+    content: " ";
+    visibility: hidden;
+}
 
 .invitation-text .line1 {
     font-size: clamp(1.4rem, 2vw, 2rem);
