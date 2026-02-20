@@ -165,7 +165,6 @@ export default function MorphScene() {
                     {stage === 2 && (
                         <div className="details-content animate">
                             <img src="/flower-small.png" className="top-flower" alt="flower" />
-                            <p className="date">4th June 2026</p>
 
                             <div className="dark-glass-card">
                                 <p className="wedding-title">
@@ -191,6 +190,17 @@ export default function MorphScene() {
                             </p>
 
                             <hr className="divider-two" />
+
+                            <div
+                                className="scroll-indicator stage2-arrow"
+                                onClick={() => {
+                                    const next = document.querySelector('[data-stage="3"]');
+                                    next?.scrollIntoView({ behavior: "smooth" });
+                                }}
+                            >
+                                ↓ RSVP ↓
+                            </div>
+
                         </div>
                     )}
 

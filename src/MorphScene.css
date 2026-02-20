@@ -436,6 +436,14 @@
     color: #f0e9e9;
 }
 
+.stage2-arrow {
+    position: relative !important;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 30px;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1529,6 +1537,22 @@ body {
         color: #1f1401;
     }
 
+    .invitation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .scroll-indicator {
+        position: relative;   /* remove absolute */
+        bottom: auto;
+        left: auto;
+        transform: none;
+
+        margin-top: 35px;     /* 👈 this creates the gap after line3 */
+    }
+
+
     .invitation-text .line1 {
         font-size: 1.9rem;
     }
@@ -1707,6 +1731,13 @@ body {
 
     .divider-one {
         margin-top: 20px;
+    }
+
+    .stage2-arrow {
+        position: relative;
+        margin-top: 35px;
+        font-size: 1rem; /* slightly smaller for mobile */
+        letter-spacing: 2px;
     }
 
     .rsvp-title {
@@ -2050,5 +2081,9 @@ body {
 
     .invitation-text .line3 {
         font-size: 2rem;
+    }
+
+    .scroll-indicator {
+        margin-top: 25px; /* slightly tighter */
     }
 }
