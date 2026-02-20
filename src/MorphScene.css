@@ -1570,19 +1570,18 @@ body {
         color: #1f1401;
     }
 
-    .invitation {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .invitation, 
+    .details-content {
+        position: relative; /* parent must be relative */
     }
 
-    .scroll-indicator {
-        position: relative;   /* remove absolute */
-        bottom: auto;
-        left: auto;
-        transform: none;
+    .scroll-indicator,
+    .stage2-arrow {
+        position: absolute;       /* keep absolute */
+        left: 50%;                /* always center horizontally */
+        transform: translateX(-50%);
+        bottom: 10px;             /* or adjust for spacing */
         text-align: center;
-        margin-top: 35px;     /* 👈 this creates the gap after line3 */
     }
 
 
@@ -1627,20 +1626,6 @@ body {
 
     .inviting-text {
         font-size: 1.4rem;
-    }
-
-    .details-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;  /* centers arrow */
-    }
-
-    .stage2-arrow {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        margin-top: 25px;  /* spacing after divider-two */
     }
 
     .rsvp-title {
