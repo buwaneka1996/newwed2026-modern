@@ -135,6 +135,10 @@
     visibility: hidden;
 }
 
+.invitation {
+    position: relative; /* needed for absolute children like the arrow */
+}
+
 .invitation-text .line1 {
     font-size: clamp(1.4rem, 2vw, 2rem);
     opacity: 0.8;
@@ -436,12 +440,16 @@
     color: #f0e9e9;
 }
 
+.details-content {
+    position: relative; /* needed for absolute child positioning */
+}
+
 .stage2-arrow {
     position: absolute;
     bottom: 30px;
     left: 50%;
-    transform: translateY(-50%);
-    font-size: 1.8rem;
+    transform: translateX(-50%); /* horizontal centering */
+    font-size: 1.5rem;
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.8s ease, transform 0.3s ease;
@@ -454,7 +462,7 @@
 
 .stage2-arrow:hover {
     opacity: 1;
-    transform: translateX(-50%) translateY(-3px);
+    transform: translateX(-50%) translateY(-3px); /* keep hover effect */
 }
 
 /* Reuse the same bounce */
