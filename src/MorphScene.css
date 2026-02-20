@@ -212,7 +212,7 @@
 
 .scroll-indicator {
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.8rem;
@@ -446,7 +446,7 @@
 
 .stage2-arrow {
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%); /* horizontal centering */
     font-size: 1.5rem;
