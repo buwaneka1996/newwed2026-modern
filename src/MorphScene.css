@@ -1579,9 +1579,9 @@ body {
     .scroll-indicator {
         position: relative;   /* remove absolute */
         bottom: auto;
-        left: 50%;
+        left: auto;
         transform: none;
-
+        text-align: center;
         margin-top: 35px;     /* 👈 this creates the gap after line3 */
     }
 
@@ -1627,6 +1627,20 @@ body {
 
     .inviting-text {
         font-size: 1.4rem;
+    }
+
+    .details-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* centers arrow */
+    }
+
+    .stage2-arrow {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 25px;  /* spacing after divider-two */
     }
 
     .rsvp-title {
