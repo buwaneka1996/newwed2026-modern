@@ -440,9 +440,19 @@
     position: relative !important;
     bottom: auto;
     left: auto;
-    transform: none;
+    transform: none !important;
     margin-top: 30px;
+    opacity: 0.8;
+    text-align: center;
+
+    animation: stage2Pulse 2s ease-in-out infinite;
 }
+
+@keyframes stage2Pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
 
 @keyframes fadeIn {
     from {

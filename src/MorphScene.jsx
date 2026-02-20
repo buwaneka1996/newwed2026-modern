@@ -192,7 +192,7 @@ export default function MorphScene() {
                             <hr className="divider-two" />
 
                             <div
-                                className="scroll-indicator stage2-arrow"
+                                className="scroll-indicator stage2-arrow visible"
                                 onClick={() => {
                                     const next = document.querySelector('[data-stage="3"]');
                                     next?.scrollIntoView({ behavior: "smooth" });
