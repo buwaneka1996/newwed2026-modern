@@ -841,7 +841,7 @@
 }
 
 .rsvp-confirmation-title {
-    font-family: 'Bad Russian', serif;
+    font-family:'Times New Roman', Times, serif;
     font-size: clamp(2rem, 4vw, 3rem);
     color: #f1c98a;
     margin-bottom: 16px;
