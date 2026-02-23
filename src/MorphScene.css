@@ -410,6 +410,11 @@
     color: #f0e9e9;
 }
 
+.wedding-date {
+    color: #ffcb79; /* example gold tone */
+    font-weight: 600; /* optional */
+}
+
 
 @keyframes fadeIn {
     from {
@@ -583,7 +588,7 @@
     font-size: clamp(1rem, 1vw, 1rem);
     margin: 10px 0;
     color: #ebebeb;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-family: 'Times New Roman', Times, serif;
 }
 

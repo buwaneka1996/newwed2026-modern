@@ -172,7 +172,7 @@ export default function MorphScene() {
                             <p className="inviting-text">
                                 Invite you to share in the joy of our<br />
                                 marriage on<br />
-                                Thursday, June 4th, 2026
+                                <span className="wedding-date">Thursday, June 4th, 2026</span>
                             </p>
 
                             <hr className="divider-two" />
