@@ -720,10 +720,14 @@
     color: rgb(255, 255, 255);
 }
 
-.rsvp-note-container {
+/*.rsvp-note-container {
     min-height: 55px;
-    /* keeps the spacing reserved */
+    /* keeps the spacing reserved 
     overflow: hidden;
+*/
+
+.rsvp-note-container {
+    margin-top: 10px;
 }
 
 /* hidden by default */
@@ -734,7 +738,7 @@
     line-height: 1.4;
     text-align: center;
 
-    opacity: 0;
+    opacity: 1;
     /* hidden by default */
     transform: translateY(-8px);
     pointer-events: none;
@@ -743,12 +747,12 @@
 }
 
 /* visible when YES */
-.rsvp-note.show {
+/*.rsvp-note.show {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
     transition: all 0.7s ease;
-}
+}*/
 
 /* ===============================
    Submit Button
