@@ -808,7 +808,8 @@
 .details-content.animate .attendance-options,
 .details-content.animate .rsvp-field.guest-count-container,
 .details-content.animate .rsvp-submit,
-.details-content.animate .rsvp-field.message-field {
+.details-content.animate .rsvp-field.message-field, 
+.details-content.animate .rsvp-note {
     opacity: 0;
     animation: cleanFadeUp 0.7s ease forwards;
 }
