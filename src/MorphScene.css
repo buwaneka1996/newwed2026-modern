@@ -1124,11 +1124,11 @@ body {
     }
 
     .stage-2 {
-        min-height: 80vh;
+        min-height: auto;
     }
 
     .stage-3 {
-        min-height: 80vh;
+        min-height: auto;
     }
 
     .stage-4 {
