@@ -135,10 +135,6 @@
     visibility: hidden;
 }
 
-.invitation {
-    position: relative; /* needed for absolute children like the arrow */
-}
-
 .invitation-text .line1 {
     font-size: clamp(1.4rem, 2vw, 2rem);
     opacity: 0.8;
@@ -208,32 +204,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.8s ease, transform 0.3s ease;
-}
-
-.scroll-indicator.visible {
-    opacity: 0.7;
-    animation: bounce 2s infinite;
-}
-
-.scroll-indicator:hover {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-3px);
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translate(-50%, 0); }
-    50% { transform: translate(-50%, 6px); }
 }
 
 .flowers-container {
@@ -438,42 +408,6 @@
     opacity: 0;
     font-family: 'Times New Roman', Times, serif;
     color: #f0e9e9;
-}
-
-.details-content {
-    position: relative; /* needed for absolute child positioning */
-}
-
-.stage2-arrow {
-    position: absolute;
-    bottom: -50px;
-    
-    transform: translateX(-50%); /* horizontal centering */
-    font-size: 1.5rem;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.8s ease, transform 0.3s ease;
-}
-
-.stage2-arrow.visible {
-    opacity: 0.7;
-    animation: bounce 2s infinite;
-}
-
-.stage2-arrow:hover {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-3px); /* keep hover effect */
-}
-
-/* Reuse the same bounce */
-@keyframes bounce {
-    0%, 100% { transform: translate(-50%, 0); }
-    50% { transform: translate(-50%, 6px); }
-}
-
-@keyframes stage2Pulse {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
 }
 
 
@@ -1568,20 +1502,6 @@ body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: #1f1401;
-    }
-
-    .invitation, 
-    .details-content {
-        position: relative; /* parent must be relative */
-    }
-
-    .scroll-indicator,
-    .stage2-arrow {
-        position: absolute;       /* keep absolute */
-        left: 50%;                /* always center horizontally */
-        transform: translateX(-50%);
-        bottom: 10px;             /* or adjust for spacing */
-        text-align: center;
     }
 
 

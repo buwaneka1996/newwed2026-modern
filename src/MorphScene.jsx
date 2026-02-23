@@ -148,17 +148,6 @@ export default function MorphScene() {
                                 <span className="line line3">ISHINI & BUWANEKA</span>
                             </p>
 
-                            {guestName && (
-                                <div
-                                    className={`scroll-indicator ${guestName ? "visible" : ""}`}
-                                    onClick={() => {
-                                        const next = document.querySelector('[data-stage="2"]');
-                                        next?.scrollIntoView({ behavior: "smooth" });
-                                    }}
-                                >
-                                    ↓
-                                </div>
-                            )}
                         </div>
                     )}
 
@@ -190,16 +179,6 @@ export default function MorphScene() {
                             </p>
 
                             <hr className="divider-two" />
-
-                            <div
-                                className="scroll-indicator stage2-arrow visible"
-                                onClick={() => {
-                                    const next = document.querySelector('[data-stage="3"]');
-                                    next?.scrollIntoView({ behavior: "smooth" });
-                                }}
-                            >
-                                ↓ RSVP ↓
-                            </div>
 
                         </div>
                     )}
