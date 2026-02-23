@@ -71,30 +71,27 @@ export default function MorphScene() {
         const observer = new IntersectionObserver(
             entries => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const nextStage = Number(entry.target.dataset.stage);
-                        if (!nextStage) return;
+                    if (!entry.isIntersecting) return;
 
-                        // Block progression until name is visible
-                        if (!guestName && nextStage > 1) return;
+                    const nextStage = Number(entry.target.dataset.stage);
+                    if (!nextStage) return;
 
-                        // Prevent skipping stages
-                        if (nextStage > stage + 1) {
-                            return;
-                        }
+                    // Block progression until name is visible
+                    if (!guestName && nextStage > 1) return;
 
-                        setStage(nextStage);
-                    }
+                    setStage(nextStage);
                 });
             },
-            { threshold: window.innerWidth < 768 ? 0.25 : 0.5 }
+            {
+                threshold: window.innerWidth < 768 ? 0.2 : 0.5
+            }
         );
 
         document.querySelectorAll('.scroll-trigger')
             .forEach(el => observer.observe(el));
 
         return () => observer.disconnect();
-    }, [stage, guestName]);
+    }, [guestName]);
 
 
     const handleRSVPSubmit = async (e) => {
