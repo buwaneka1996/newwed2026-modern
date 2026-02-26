@@ -201,7 +201,7 @@ export default function MorphScene() {
                                         }}
                                         disabled={isExpired}
                                     >
-                                        Yes, gladly
+                                        Gladly Yes
                                     </button>
 
                                     <button
@@ -244,9 +244,9 @@ export default function MorphScene() {
                                 {/*<p className={`rsvp-note ${attendance === "yes" ? "show" : ""}`}>*/}
                                 <div className="rsvp-note-container">
                                     <p className={"rsvp-note"}>
-                                        The joy of celebrating with you is all we wish for! <br />
-                                        If you would like to honor us with a gift, we kindly request no boxed gifts, <br />
-                                        as monetary contributions toward our future are most appreciated. 
+                                        Your presence is our greatest gift. <br />
+                                        If you wish to give a gift, a contribution toward our journey ahead <br />
+                                        would mean so much to us.
                                     </p>
                                 </div>
 
