@@ -297,7 +297,7 @@ export default function MorphScene() {
 
                                     {/* Flower */}
                                     <img
-                                        src="/f3.png"
+                                        src="/f4.png"
                                         alt="Decorative Flower"
                                         className="contact-flower small"
                                     />
