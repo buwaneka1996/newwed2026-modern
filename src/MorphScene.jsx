@@ -150,7 +150,7 @@ export default function MorphScene() {
 
                     {stage === 2 && (
                         <div className="details-content animate">
-                            <img src="/flower-small2.png" className="top-flower" alt="flower" />
+                            <img src="/flower-small3.png" className="top-flower" alt="flower" />
 
                             <div className="dark-glass-card">
                                 <p className="wedding-title">
