@@ -943,6 +943,8 @@
 .contact-flower.small {
     width: 80px;
     margin-bottom: 10px;
+
+    filter: sepia(40%) saturate(120%) hue-rotate(340deg) brightness(105%);
 }
 
 .flower-divider1 {
