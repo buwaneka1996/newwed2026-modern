@@ -1512,8 +1512,7 @@ body {
         font-size: 1.6rem;
         margin: 10px;
         font-weight: 900;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        
         color: #5a2400;
     }
 
@@ -1649,8 +1648,7 @@ body {
     .guest-name {
         font-size: 1.45rem;
         font-weight: 900;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        
         color: #5a2400;
     }
 
@@ -1792,10 +1790,8 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
-        font-weight: 700;
         font-weight: 900;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        
         color: #5a2400;
     }
 
@@ -1900,10 +1896,8 @@ body {
 
     .guest-name {
         font-size: 1.45rem;
-        font-weight: 700;
         font-weight: 900;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        
         color: #5a2400;
     }
 
@@ -2027,8 +2021,7 @@ body {
         font-size: 1.45rem;
         font-weight: 700;
         font-weight: 900;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        
         color: #5a2400;
     }
 
