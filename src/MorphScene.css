@@ -1505,8 +1505,7 @@ body {
 @media (max-width: 768px) {
 
     .flower {
-        width: 50%;
-        ;
+        width: 40%;
     }
 
     .guest-name {
@@ -1644,8 +1643,7 @@ body {
 @media (max-width: 540px) {
 
     .flower {
-        width: 60%;
-        ;
+        width: 50%;
     }
 
     .guest-name {
@@ -1789,8 +1787,7 @@ body {
 @media (max-width: 420px) {
 
     .flower {
-        width: 70%;
-        ;
+        width: 50%;
     }
 
     .guest-name {
@@ -1898,8 +1895,7 @@ body {
 @media (max-width: 375px) {
 
     .flower {
-        width: 60%;
-        ;
+        width: 50%;
     }
 
     .guest-name {
