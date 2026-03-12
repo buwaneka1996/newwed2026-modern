@@ -125,8 +125,8 @@ export default function MorphScene() {
                 {/* STAGE 1: FLOWERS  */}
 
                 <div className={`flowers-container ${stage > 1 ? 'fade-out' : ''}`}>
-                    <img src="/flower1.png" className="flower flower1" alt="flower" />
-                    <img src="/flower1.png" className="flower flower2" alt="flower" />
+                    <img src="/flower2.png" className="flower flower1" alt="flower" />
+                    <img src="/flower2.png" className="flower flower2" alt="flower" />
                 </div>
 
 
