@@ -236,7 +236,7 @@
 
 /* Specific positions */
 .flower1 {
-    right: 0;
+    right: -80px;
     animation-delay: 0.3s;
     z-index: 2;
 }
@@ -244,7 +244,7 @@
 /* flipped in right bottom corner */
 
 .flower2 {
-    left: 0;
+    left: -80px;
     animation-delay: 0.9s;
     z-index: 2;
     animation: fadeInFlower2 3s ease forwards;
