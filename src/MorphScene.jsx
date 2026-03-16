@@ -282,12 +282,12 @@ export default function MorphScene() {
                                     <h2 className="contact-title">Contact Us</h2>
 
                                     <div className="contact-item">
-                                        <span className="contact-label">Bride - Ishini</span>
+                                        <span className="contact-label">Bride</span>
                                         <span className="contact-number">+94 70 245 0204</span>
                                     </div>
 
                                     <div className="contact-item">
-                                        <span className="contact-label">Groom - Buwaneka</span>
+                                        <span className="contact-label">Groom</span>
                                         <span className="contact-number">+94 77 260 1316</span>
                                     </div>
                                 </div>
