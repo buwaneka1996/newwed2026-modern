@@ -246,7 +246,7 @@ export default function MorphScene() {
                                     <p className={"rsvp-note"}>
                                         Your presence is our greatest gift. <br />
                                         If you wish to give a gift, a contribution toward our journey <br />
-                                        would mean so much to us.
+                                        would mean so much to us. No physical gifts.
                                     </p>
                                 </div>
 
