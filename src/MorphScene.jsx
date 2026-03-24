@@ -165,7 +165,7 @@ export default function MorphScene() {
                                 Colombo 03
                             </p>
 
-                            <p className="time">Poruwa Ceremony at 09.07 AM</p>
+                            <p className="time">Poruwa Ceremony at 09.00 AM</p>
 
                             <hr className="divider-one" />
 
